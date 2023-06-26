@@ -753,7 +753,7 @@ function WealthMountain() {
                             <p className="text-left"><span className="font-weight-bold">Staking fee is a flat 10%. </span>Use the Earnings Calculator to determine how much a stake will earn daily.</p>
                             <small className="text-left">Disclaimer: Dividend payouts will take place at a flat rate. Payouts continue contingent on Smart Contract health and liquidity.</small>
                             <small className="pt-3 text-center font-weight-bold">
-                                <Link className="text-lightblue" to="/faq">For further questions, please read our DOCS</Link>
+                                <Link className="text-lightblue" to="https://unitymine.network/docs.pdf">For further questions, please read our DOCS</Link>
                             </small>
                         </Card>
                     </CardDeck>
