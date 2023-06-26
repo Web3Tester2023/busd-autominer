@@ -479,7 +479,7 @@ function WealthMountain() {
                     return (
                         <>
                             <tr>
-                                <td>${depoAmount.toFixed(2)}</td>
+                                <td>{depoAmount.toFixed(2)}</td>
                                 <td>{daysStaked}</td>
                                 <td>{dailyPercent}%</td>
                                 <td>{daysToMax}</td>
@@ -532,7 +532,7 @@ function WealthMountain() {
                                 withdrawInitial(key)
                             }}>
                                 <Col className="text-center">
-                                    <Row>${depoAmount}</Row>
+                                    <Row>{depoAmount}</Row>
                                     <Row><small className="text-muted">{depoStart}</small></Row>
                                 </Col>
                             </DropdownItem>
@@ -608,7 +608,7 @@ function WealthMountain() {
                         <Card body className="text-center text-lightblue">
                             <h5 className="calvino text-lightblue">TVL</h5>
                             <h5 className="source font-weight-bold text-white">
-                                {Number(contractBalance) === 0 ? <>?</> : <>${Number(contractBalance).toFixed(0)}</>}
+                                {Number(contractBalance) === 0 ? <>?</> : <>{Number(contractBalance).toFixed(0)}</>}
                             </h5>
                         </Card>
                         <Card body className="text-center text-lightblue">
@@ -649,7 +649,7 @@ function WealthMountain() {
                     <CardDeck className="p-3">
                         <Card body className="text-center text-lightblue">
                             <h4 className="calvino text-lightblue">TOTAL STAKED VALUE</h4>
-                            <h1 className="source font-weight-bold text-white">$<TotalStakedValue /></h1>
+                            <h1 className="source font-weight-bold text-white"><TotalStakedValue /></h1>
                             <UnstakeOptions />
                         </Card>
                         <Card body className="text-center text-lightblue">
@@ -659,7 +659,7 @@ function WealthMountain() {
                                     <h4 className="source font-weight-bold text-white"><TotalEarnedPercent /></h4>
                                 </Card>
                                 <Card style={{background: "transparent"}}>
-                                    <h4 className="source font-weight-bold text-white">$<TotalEarnedValue /></h4>
+                                    <h4 className="source font-weight-bold text-white"><TotalEarnedValue /></h4>
                                 </Card>
                             </CardDeck>
                             <Row>
@@ -676,7 +676,7 @@ function WealthMountain() {
                             <h5 className="calvino text-lightblue">REFERRALS EARNED</h5>
                             {refBonusLoading ? <></> :
                                 <>
-                                    <h4 className="source font-weight-bold text-white">${referralAccrued}</h4>
+                                    <h4 className="source font-weight-bold text-white">{referralAccrued}</h4>
                                     <Row>
                                         <Col>
                                             <Button className="custom-button source mt-2" outline onClick={stakeRefBonus}>STAKE</Button>
@@ -710,7 +710,7 @@ function WealthMountain() {
                                     <small className="source">days until max</small>
                                 </Card>
                                 <Card>
-                                    <h4 className="source font-weight-bold text-white">$</h4>
+                                    <h4 className="source font-weight-bold text-white"></h4>
                                     <small className="source">max per day</small>
                                 </Card>
                             </CardDeck>
@@ -1007,22 +1007,22 @@ function WealthMountain() {
                                 <h3 className="calvino font-weight-bold text-lightblue">EARNINGS</h3>
                                 <CardDeck>
                                     <Card style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
-                                        <h3 className="calvino text-white">${calcTotalDividends}</h3>
-                                        <small className="source text-white">total dividends earned</small>
+                                        <h3 className="calvino text-white">{calcTotalDividends}</h3>
+                                        <small className="source text-white">Total Stake Rewards</small>
                                     </Card>
                                     <Card style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
-                                        <h3 className="calvino text-white">${initalStakeAfterFees}</h3>
-                                        <small className="source text-white">initial stake after fees</small>
+                                        <h3 className="calvino text-white">{initalStakeAfterFees}</h3>
+                                        <small className="source text-white">Total Stake</small>
                                     </Card>
                                 </CardDeck>
                                 <CardDeck className="pt-3">
                                     <Card style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
                                         <h3 className="calvino text-white">{dailyPercent}%</h3>
-                                        <small className="source text-white">earning daily (%)</small>
+                                        <small className="source text-white">Stake Rewards (%)</small>
                                     </Card>
                                     <Card style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
-                                        <h3 className="calvino text-white">${dailyValue}</h3>
-                                        <small className="source text-white">earning daily ($)</small>
+                                        <h3 className="calvino text-white">{dailyValue}</h3>
+                                        <small className="source text-white">Daily Rewards</small>
                                     </Card>
                                 </CardDeck>
                             </Card>
