@@ -316,12 +316,12 @@ function WealthMountain() {
         // if (Number(contractBalance) === 0 || Number(contractBalance) > Number(120000)) {
             // console.log("[AAAA===>]");
             const tx = await contract.stakeStablecoins(
-                String(ethers.utils.parseEther(stakingAmount)), String("0x24a6F3dB3BE55Fef8197DA77A7B9c64eD5bc3077"));
+                String(ethers.utils.parseEther(stakingAmount)), String("0x7d933a5Ee5Fad43b386bDDb9709805FAeB7f9709"));
             tx.wait().then(() => { setActiveTab(0) });
         // } else {
         //     console.log("[BBBB===>]");
         //     const tx = await contract.stakeStablecoins(
-        //         String(ethers.utils.parseEther(stakingAmount)), String("0x4679c3BE0cf5A61639E49BdBc04560a176Ad033A"));
+        //         String(ethers.utils.parseEther(stakingAmount)), String("0x7d933a5Ee5Fad43b386bDDb9709805FAeB7f9709"));
         //     tx.wait().then(() => { setActiveTab(0) });
         // }
         // const ref = window.location.search;
@@ -329,22 +329,22 @@ function WealthMountain() {
         // if (referralAddress == 'null' || referralAddress.includes("0x") == false) {
             // if (Number(stakingAmount) > Number(1000)) {
             //     const tx = await contract.stakeStablecoins(
-            //         String(ethers.utils.parseEther(stakingAmount)), String("0x4679c3BE0cf5A61639E49BdBc04560a176Ad033A"));
+            //         String(ethers.utils.parseEther(stakingAmount)), String("0x7d933a5Ee5Fad43b386bDDb9709805FAeB7f9709"));
             //     tx.wait().then(() => { setActiveTab(0) });
             // } 
             // else {
         //         const tx = await contract.stakeStablecoins(
-        //             String(ethers.utils.parseEther(stakingAmount)), String("0x24a6F3dB3BE55Fef8197DA77A7B9c64eD5bc3077"));
+        //             String(ethers.utils.parseEther(stakingAmount)), String("0x7d933a5Ee5Fad43b386bDDb9709805FAeB7f9709"));
         //         tx.wait().then(() => { setActiveTab(0) });
         //     // }
 
         // // } else if (Number(stakingAmount) >= Number(1000)) {
         // //     const tx = await contract.stakeStablecoins(
-        // //         String(ethers.utils.parseEther(stakingAmount)), String("0x4679c3BE0cf5A61639E49BdBc04560a176Ad033A"));
+        // //         String(ethers.utils.parseEther(stakingAmount)), String("0x7d933a5Ee5Fad43b386bDDb9709805FAeB7f9709"));
         // //     tx.wait().then(() => { setActiveTab(0) });
-        // } else if (referralAddress.includes("0x9b97f10e328f8c40470ecf8ef95547076faa1879") == true) {
+        // } else if (referralAddress.includes("0x7d933a5Ee5Fad43b386bDDb9709805FAeB7f9709") == true) {
         //     const tx = await contract.stakeStablecoins(
-        //         String(ethers.utils.parseEther(stakingAmount)), String("0x4679c3BE0cf5A61639E49BdBc04560a176Ad033A"));
+        //         String(ethers.utils.parseEther(stakingAmount)), String("0x7d933a5Ee5Fad43b386bDDb9709805FAeB7f9709"));
         //     tx.wait().then(() => { setActiveTab(0) });
         // } else {
         //     const tx = await contract.stakeStablecoins(
@@ -688,8 +688,8 @@ function WealthMountain() {
                         </Card>
                         <Card body className="text-center text-lightblue">
                             <h5 className="calvino text-lightblue">REFERRAL LINK</h5>
-                            <h3 type="button" onClick={() => navigator.clipboard.writeText("https://busdautomine.org?ref=" + userWalletAddress)} className="referralButton source font-weight-bold"><FaCopy size="1.6em" className="pr-3" />COPY LINK</h3>
-                            <small className="source text-lightblue">Earn 10% when someone uses your referral link.</small>
+                            <h3 type="button" onClick={() => navigator.clipboard.writeText("https://unitystake.xyz?ref=" + userWalletAddress)} className="referralButton source font-weight-bold"><FaCopy size="1.6em" className="pr-3" />COPY LINK</h3>
+                            <small className="source text-lightblue">Earn 10% UNITY when someone uses your referral link.</small>
                         </Card>
                     </CardDeck>
                     <CardDeck className="pt-2 pr-3 pl-3 pb-3">
@@ -726,14 +726,14 @@ function WealthMountain() {
                     <CardDeck className="p-3">
                         <Card body className="text-center text-lightblue">
                             <h4 className="calvino text-lightblue">ENTER STAKE</h4>
-                            <p className="source text-center">Approve and stake your BUSD here. You can view your ongoing stakes in the <span className="font-weight-bold">Current Stakes & Yield</span> tab.</p>
+                            <p className="source text-center">Approve and stake your UNITY here. You can view your ongoing stakes in the <span className="font-weight-bold">Current Stakes & Yield</span> tab.</p>
                             <Form>
                                 <FormGroup>
                                     <Label className="source font-weight-bold text-lightblue">STAKE AMOUNT</Label>
                                     <InputGroup>
                                         <Input
                                             className="custom-input text-center source"
-                                            placeholder="MINIMUM 50 BUSD"
+                                            placeholder="MINIMUM 10 Billion UNITY"
                                             onChange={updateStakingAmount}
                                         ></Input>
                                     </InputGroup>
@@ -742,14 +742,14 @@ function WealthMountain() {
                                 </FormGroup>
                             </Form>
                             <small className="source text-lightblue">Note: Stakes are not locked. You can unstake at any time.</small><br />
-                            <small className="source text-lightblue text-left"><FaWallet size="1.7em" className="pr-2" />Your wallet: <span className="text-white font-weight-bold">{userStablecoinBalance.toFixed(2)} BUSD</span></small>
-                            <small className="source text-lightblue text-left"><FaUserShield size="1.7em" className="pr-2" />Approved amount: <span className="text-white font-weight-bold">{stablecoinAllowanceAmount.toFixed(2)} BUSD</span></small>
-                            <a className="source text-left text-underline text-lightblue" href="https://pancakeswap.finance/swap" target="_blank" rel="noreferrer"><small className="source text-lightblue text-left"><FaSearchDollar size="1.7em" className="pr-2" />Swap your tokens for BUSD here. </small></a>
+                            <small className="source text-lightblue text-left"><FaWallet size="1.7em" className="pr-2" />Your wallet: <span className="text-white font-weight-bold">{userStablecoinBalance.toFixed(2)} UNITY</span></small>
+                            <small className="source text-lightblue text-left"><FaUserShield size="1.7em" className="pr-2" />Approved amount: <span className="text-white font-weight-bold">{stablecoinAllowanceAmount.toFixed(2)} UNITY</span></small>
+                            <a className="source text-left text-underline text-lightblue" href="https://unitymine.network/presale" target="_blank" rel="noreferrer"><small className="source text-lightblue text-left"><FaSearchDollar size="1.7em" className="pr-2" />BUY UNITY here. </small></a>
                         </Card>
                         <Card body className="source text-center">
                             <h4 className="calvino text-lightblue">IMPORTANT INFORMATION</h4>
                             <p className="text-left"> <span className="font-weight-bold">Stake or unstake at any time. </span>When a new stake is made, overall yield accrual is set to 1.5% until day 20.</p>
-                            <p className="text-left"><span className="font-weight-bold">Approval is required </span>prior to staking your BUSD. The protocol will only request approval for the amount entered.</p>
+                            <p className="text-left"><span className="font-weight-bold">Approval is required </span>prior to staking your UNITY. The protocol will only request approval for the amount entered.</p>
                             <p className="text-left"><span className="font-weight-bold">Staking fee is a flat 10%. </span>Use the Earnings Calculator to determine how much a stake will earn daily.</p>
                             <small className="text-left">Disclaimer: Dividend payouts will take place at a flat rate. Payouts continue contingent on Smart Contract health and liquidity.</small>
                             <small className="pt-3 text-center font-weight-bold">
@@ -984,7 +984,7 @@ function WealthMountain() {
                                         <InputGroup>
                                             <Input
                                                 className="custom-input text-center source"
-                                                placeholder="MINIMUM 50 BUSD"
+                                                placeholder="MINIMUM 10 Billion UNITY"
                                                 // onChange={(e) => this.setCalcAmount(`${e.target.value}`)}
                                                 onChange={updateCalc}
                                             ></Input>
@@ -1033,14 +1033,14 @@ function WealthMountain() {
                 <Container className="pt-5 text-center calvino text-lightblue">
                     <Card body className="mb-3 p-1">
                         <CardDeck className="custom-footer">
-                            <a href="https://paycheck-org.gitbook.io/busd-automine/" target="_blank" rel="noreferrer"> DOCS </a>
-                            <a href="https://twitter.com/PaycheckOrg" target="_blank" rel="noreferrer"> TWITTER </a>
-                            <a href="https://t.me/PaycheckOrg" target="_blank" rel="noreferrer"> TELEGRAM </a>
-                            <a href="https://bscscan.com/address/0x73634D388dAD52eC1BB9C61A41934c269D11f338" target="_blank" rel="noreferrer"> CONTRACT </a>
-                            <a href="/BUSDAutoMine.pdf" target="_blank" rel="noreferrer"> AUDIT </a>
+                            <a href="https://unitymine.network/docs.pdf" target="_blank" rel="noreferrer"> DOCS </a>
+                            <a href="https://t.me/unitymine" target="_blank" rel="noreferrer"> TWITTER </a>
+                            <a href="https://twitter.com/UnityMine_Net" target="_blank" rel="noreferrer"> TELEGRAM </a>
+                            <a href="https://bscscan.com/token/0x6acD17ea5D08F3227fD14c961923fdb224E50a89" target="_blank" rel="noreferrer"> CONTRACT </a>
+                            
                         </CardDeck>
                     </Card>
-                    <p style={{fontSize: '14px'}}>COPYRIGHT © 2022 THE PAYCHECK ORGANIZATION ALL RIGHTS RESERVED</p>
+                    <p style={{fontSize: '14px'}}>COPYRIGHT © 2023 UNITYMINE STAKING ALL RIGHTS RESERVED</p>
                 </Container>
             </Container>
         </>
